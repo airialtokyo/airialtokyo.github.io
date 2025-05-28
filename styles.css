@@ -1,0 +1,58 @@
+.mainflexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2vw;
+}
+
+.basics {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    font-size: clamp(2rem, 10vw, 9.5rem);
+    font-family: "Raleway", sans-serif;
+    padding: 2vw;
+    box-sizing: border-box;
+}
+
+.textsone {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 3s, transform 3s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .basics {
+        font-size: clamp(1.5rem, 8vw, 6rem);
+        min-height: 80vh;
+    }
+    .mainflexbox {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .basics {
+        font-size: clamp(1rem, 7vw, 4rem);
+        min-height: 60vh;
+    }
+    .textsone {
+        font-size: clamp(0.9rem, 4vw, 1.2rem);
+    }
+}
